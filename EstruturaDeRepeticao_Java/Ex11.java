@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Ex11 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        List<Integer> valores = new ArrayList<Integer>();
+        List<Integer> valores = new ArrayList<>();
         float soma = 0;
         System.out.println("Insira dois números inteiros: ");
         int numero1 = sc.nextInt();
