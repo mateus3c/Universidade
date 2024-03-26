@@ -24,7 +24,7 @@ public class Ex36 {
         int terminar = sc.nextInt();
         for (int i = comecar; i <= terminar; i++) {
             System.out.println(numero + " X " + i + " = " + (numero * i));
-            sc.close();
         }
+        sc.close();
     }
 }
