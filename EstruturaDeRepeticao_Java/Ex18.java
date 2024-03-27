@@ -5,12 +5,12 @@ import java.util.Scanner;
 public class Ex18 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int soma = 0, numeros = 0;
+        int soma = 0, numeros;
         System.out.println("Insira um conjunto de N números separados por espaço: ");
         String conjunto = sc.nextLine();
         String[] numerosString = conjunto.split(" ");
         int menor = Integer.parseInt(numerosString[0]);
-        int maior = Integer.parseInt(numerosString[0]);;
+        int maior = Integer.parseInt(numerosString[0]);
         for (String numero : numerosString) {
             numeros = Integer.parseInt(numero);
             if (numeros < menor) {
