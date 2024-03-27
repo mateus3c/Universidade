@@ -1,14 +1,20 @@
-// Faça um programa que, dado um conjunto de N números, determine o menor valor, o maior valor e a soma dos valores.
+// Altere o programa anterior para que ele aceite apenas números entre 0 e 1000.
 
 import java.util.Scanner;
 
-public class Ex18 {
+public class Ex19 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int soma = 0, numeros = 0;
-        System.out.println("Insira um conjunto de N números separados por espaço: ");
+        System.out.println("Insira um conjunto de N números separados por espaço que esteja entre 0 e 1000: ");
         String conjunto = sc.nextLine();
         String[] numerosString = conjunto.split(" ");
+        for (String numero : numerosString) {
+            numeros = Integer.parseInt(numero);
+            if (numeros >= 0 && numeros <= 1000) {
+                soma += numeros;
+            }
+        }
         int menor = Integer.parseInt(numerosString[0]);
         int maior = Integer.parseInt(numerosString[0]);;
         for (String numero : numerosString) {
