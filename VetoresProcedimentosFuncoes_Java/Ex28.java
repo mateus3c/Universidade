@@ -8,11 +8,22 @@ import java.util.Scanner;
  class Ex28 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int[] valoresUnitarios = new int[10];
-        int[] quantidadesVendidas = new int[10];
-        for (i = 0 ; i < 10 ; i++) {
-            
+        float[] valoresUnitarios = new float[10];
+        float[] quantidadesVendidas = new float[10];
+        float[] dinheiroProduto = new float[10];
+        double dinheiroTotal = 0, comissao;
+        for (int i = 0 ; i < 10 ; i++) {
+            System.out.printf("\nInsira o valor do produto número n.%d: ", i);
+            valoresUnitarios[i] = sc.nextFloat();
+            System.out.printf("Insira a quantidade vendida do produto número %d: ", i);
+            quantidadesVendidas[i] = sc.nextFloat();
+            dinheiroProduto[i] = valoresUnitarios[i] * quantidadesVendidas[i];
+            dinheiroTotal += dinheiroProduto[i];
         }
-
+        for (int i = 0 ; i < 10 ; i++) {
+            System.out.printf("\n\n- Produto número n.%d - \nQuantidade vendida: %.0f \nValor Unitário: %.2f R$ \nValor total da venda do produto %d: %.2f R$", i, valoresUnitarios[i], quantidadesVendidas[i], i, dinheiroProduto[i]);
+        }
+        comissao = dinheiroTotal * 0.05;
+        System.out.printf("\n\nValor total das vendas: %.2f R$O \nValor da comissão pelas vendas: %.2f R$", dinheiroTotal, comissao);
     }
 }
