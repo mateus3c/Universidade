@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class Ex5 {
+public class Ex05 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.print("Insira a população do Pais A: ");

@@ -9,7 +9,7 @@ Estado Civil: 's', 'c', 'v', 'd';
 
 import java.util.Scanner;
 
-public class Ex3 {
+public class Ex03 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String nome;

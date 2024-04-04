@@ -1,7 +1,7 @@
 // Faça um programa que leia 5 números e informe o maior número.
 
 import java.util.Scanner;
-public class Ex7 {
+public class Ex07 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Insira cinco números: ");
