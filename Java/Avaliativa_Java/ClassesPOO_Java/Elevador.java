@@ -15,7 +15,7 @@ public class Elevador {
         if (pessoasPresentes < capacidadeMaxima) {
             pessoasPresentes++;
         } else {
-            System.out.println("O elevador está cheio. Não é possível entrar mais pessoas.");
+            System.out.println("O elevador já está cheio. Não é possível entrar mais pessoas.");
         }
     }
 
@@ -23,7 +23,7 @@ public class Elevador {
         if (pessoasPresentes > 0) {
             pessoasPresentes--;
         } else {
-            System.out.println("O elevador já está vazio. Não há ninguém para sair.");
+            System.out.println("O elevador já está vazio. Não é possível sair mais pessoas.");
         }
     }
 
