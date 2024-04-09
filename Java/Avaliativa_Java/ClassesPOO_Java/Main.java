@@ -12,7 +12,7 @@ public class Main {
     sc.nextLine();
     elevador.inicializar(elevador.capacidadeMaxima, elevador.totalAndares);
     while (true) {
-      System.out.println("\t\t\t  - O que deseja fazer? -");
+      System.out.println("\n\t\t\t  - O que deseja fazer? -");
       System.out.println("[1]Subir o elevador " + "\t|\tTotal de andares: " + elevador.totalAndares + "\n[2]Descer o elevador " + "\t|\tAndar atual: " + elevador.andarAtual + "\n[3]Entrar no elevador " + "\t|\tCapacidade maxima: " + elevador.capacidadeMaxima + "\n[4]Sair do elevador " + "\t|\tPessoas presentes: " + elevador.pessoasPresentes);
       opcao = sc.nextLine();
         switch (opcao) {
