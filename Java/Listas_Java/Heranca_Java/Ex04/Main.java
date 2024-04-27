@@ -5,7 +5,7 @@ package Ex04;
 public class Main {
     public static void main(String[] args) {
         // Instâncias da classe "Pessoa" e "Administrador".
-        Pessoa pessoa = new Pessoa("João", "Rua A, 123", "123456789");
+        Pessoa pessoa = new Pessoa("João", "Rua A, 123", "498297618");
         Administrador administrador = new Administrador("Carlos", "Rua D, 1011", "626467558", 1935.71, 6.34, 4, 79.99);
 
         // Exibe informações da pessoa

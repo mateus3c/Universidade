@@ -5,7 +5,7 @@ package Ex03;
 public class Main {
     public static void main(String[] args) {
         // Instâncias da classe "Pessoa" e "Empregado".
-        Pessoa pessoa = new Pessoa("João", "Rua A, 123", "123456789");
+        Pessoa pessoa = new Pessoa("João", "Rua A, 123", "498297618");
         Empregado empregado = new Empregado("Ana", "Rua E, 1213", "352323371", 4042.55, 9.88, 2);
 
         // Exibe informações da pessoa
