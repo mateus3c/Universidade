@@ -87,7 +87,7 @@ class Empregado extends Pessoa {
         return codigoSetor;
     }
 
-    // Método para obter o valor final do sálario do empregado.
+    // Método para obter o valor final do salário do empregado.
     public double calcularSalario() {
         return  salarioBase - (salarioBase * (imposto/100));
     }

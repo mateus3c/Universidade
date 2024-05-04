@@ -47,7 +47,7 @@ public class Pessoa {
     }
 }
 
-class Fornecedor extends Todos.Pessoa {
+class Fornecedor extends Pessoa {
     private double valorCredito, valorDivida, valorSaldo;
 
     // Construtor padrão.

@@ -90,7 +90,7 @@ class Empregado extends Pessoa {
         return codigoSetor;
     }
 
-    // Método para obter o valor final do sálario do empregado.
+    // Método para obter o valor final do salário do empregado.
     public double calcularSalario() {
         return salarioBase - (salarioBase * (imposto / 100));
     }
@@ -128,7 +128,7 @@ class Vendedor extends Empregado {
         return comissao;
     }
 
-    // Método para obter o valor final do sálario do operário.
+    // Método para obter o valor final do salário do operário.
     @Override
     public double calcularSalario() {
         return getSalarioBase() - (getSalarioBase() * (getImposto() / 100)) + (valorVendas * (comissao / 100));
