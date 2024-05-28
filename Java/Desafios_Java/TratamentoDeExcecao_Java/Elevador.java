@@ -1,4 +1,5 @@
 public class Elevador {
+    Logger log = new Logger();
     // Define atributos.
     private int andarAtual;
     private int pessoasPresentes;
@@ -19,8 +20,10 @@ public class Elevador {
     public void entrar(String mensagemEntrar) {
         if (pessoasPresentes < capacidadeMaxima) {
             pessoasPresentes++;
+            log.registrarLog("TRACE - Uma pessoa entrou no elevador. Pessoas presentes: " + pessoasPresentes);
         } else {
             System.out.println(mensagemEntrar);
+            log.registrarLog("TRACE - Tentativa de entrar com o elevador cheio.");
         }
     }
 
@@ -30,8 +33,10 @@ public class Elevador {
     public void sair(String mensagemSair) {
         if (pessoasPresentes > 0) {
             pessoasPresentes--;
+            log.registrarLog("TRACE - Uma pessoa saiu do elevador. Pessoas presentes: " + pessoasPresentes);
         } else {
             System.out.println(mensagemSair);
+            log.registrarLog("TRACE - Tentativa de sair com o elevador vazio.");
         }
     }
 
@@ -41,8 +46,10 @@ public class Elevador {
     public void subir(String mensagemSubir) {
         if (andarAtual < totalAndares) {
             andarAtual++;
+            log.registrarLog("TRACE - Elevador subiu para o andar: " + andarAtual);
         } else {
             System.out.println(mensagemSubir);
+            log.registrarLog("TRACE - Tentativa de subir além do último andar.");
         }
     }
 
@@ -52,8 +59,10 @@ public class Elevador {
     public void descer(String mensagemDescer) {
         if (andarAtual > 0) {
             andarAtual--;
+            log.registrarLog("TRACE - Elevador desceu para o andar: " + andarAtual);
         } else {
             System.out.println(mensagemDescer);
+            log.registrarLog("TRACE - Tentativa de descer além do térreo.");
         }
     }
 

@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Main {
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
+    Logger log = new Logger();
     // Define variáveis
     int opcao;
     int capacidadeMaxima = 0;
@@ -22,10 +23,16 @@ public class Main {
         // A variável 'sucesso' se torna verdadeira caso o bloco de código execute até o
         // fim, e isso só é possível se não houver nenhum erro.
         sucesso = true;
+        // Registra ação no log.
+        log.registrarLog("TRACE - Capacidade máxima definida: " + capacidadeMaxima);
+        log.registrarLog("TRACE - Total de andares definido: " + totalAndares);
       } // Caso o usuário digite um caractere ou um número não inteiro, a exceção será
         // tratada e ele receberá uma mensagem indicando o erro.
       catch (InputMismatchException e) {
         System.out.println("\nENTRADA INVÁLIDA. POR FAVOR, DIGITE UM NÚMERO INTEIRO.\n\n");
+        // Registra ação no log.
+        log.registrarLog("ERROR - InputMismatchException: " + e.getMessage());
+
       }
       // Para evitar que a entrada que causou o erro continue sendo lida
       // infinitamente, é necessário limpar o buffer do scanner. Esse trecho de código
@@ -51,15 +58,27 @@ public class Main {
         switch (opcao) {
           case 1:
             elevador.subir("O elevador já está no último andar. Não é possível subir mais.");
+            // Registra ação no log.
+            log.registrarLog("TRACE - Comando para subir o elevador.");
+
             break;
           case 2:
             elevador.descer("O elevador já está no térreo. Não é possível descer mais.");
+            // Registra ação no log.
+            log.registrarLog("TRACE - Comando para descer o elevador.");
+
             break;
           case 3:
             elevador.entrar("O elevador já está cheio. Não é possível entrar mais pessoas.");
+            // Registra ação no log.
+            log.registrarLog("TRACE - Comando para entrar no elevador.");
+
             break;
           case 4:
             elevador.sair("O elevador já está vazio. Não é possível sair mais pessoas.");
+            // Registra ação no log.
+            log.registrarLog("TRACE - Comando para sair do elevador.");
+
             break;
           // Caso o usuário digite um número que não esteja entre as opções (1, 2, 3 ou 4)
           // ele receberá uma mensagem padrão, que aparece caso a entrada seja qualquer
@@ -68,6 +87,9 @@ public class Main {
           // das opções do programa (1, 2, 3 ou 4).
           default:
             System.out.println("\nOPÇÃO INVÁLIDA. POR FAVOR, DIGITE UMA DAS OPÇÕES DISPONÍVEIS (1, 2, 3, 4)\n\n");
+            // Registra ação no log.
+            log.registrarLog("ERROR - Opção inválida selecionada: " + opcao);
+
             // Normalmente não há 'break' na resposta padrão, mas neste caso eu optei por
             // utilizar o 'break' pois o switch já está dentro de um loop infinito, então a
             // ausencia do 'break' causaria um consumo desnecessário de memória.
@@ -78,6 +100,9 @@ public class Main {
       // tratada e ele receberá uma mensagem indicando o erro.
       catch (InputMismatchException e) {
         System.out.println("\nOPÇÃO INVÁLIDA. POR FAVOR, DIGITE UMA DAS OPÇÕES DISPONÍVEIS (1, 2, 3, 4)\n\n");
+        // Registra ação no log.
+        log.registrarLog("ERROR - InputMismatchException: " + e.getMessage());
+
       } // Para evitar que a entrada que causou o erro continue sendo lida infinitas
         // vezes, é necessário limpar o buffer do scanner.
       finally {
